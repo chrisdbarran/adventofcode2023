@@ -14,17 +14,6 @@ def parse_data(filename):
                 paths.append(key)
     return (steps, nodes, paths)
 
-def not_complete(paths):
-    for path in paths:
-        if path.endswith('Z'):
-            continue
-        else:
-            return True
-    return False
-
-def complete(paths):
-    return not not_complete(paths)
-
 debug = False
 def follow_map(steps, nodes, paths):
     results = {}
